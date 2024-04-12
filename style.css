@@ -89,6 +89,16 @@ span {
   padding-right: 30px;
 }
 
-.content-vantangem {
+.item-vantagem {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  padding: 0px;
+  gap: 5px;
+}
+.item-vantagem img {
+  justify-self: end;
   align-self: center;
+}
+.item-vantagem span {
+  grid-column: 2;
 }
