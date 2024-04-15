@@ -18,7 +18,7 @@ main {
   justify-content: center;
   margin: auto;
 }
-span {
+p {
   font-size: 20px;
 }
 
@@ -68,9 +68,12 @@ span {
 .descricao h2 {
   font-size: 30px;
 }
-.descricao span {
+.descricao p {
   text-align: right;
   line-height: 30px;
+}
+.descricao {
+  position: relative;
 }
 
 .descricao a {
@@ -99,6 +102,16 @@ span {
   justify-self: end;
   align-self: center;
 }
-.item-vantagem span {
+.item-vantagem p {
   grid-column: 2;
+  margin: 0;
+}
+
+.linha-vermelha {
+  width: 60px;
+  height: 4px;
+  background-color: #ee2211;
+  position: absolute;
+  top: 40px;
+  right: -30px;
 }
