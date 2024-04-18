@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -8,6 +11,7 @@ footer {
   margin-top: 40px;
   background-color: white;
   padding: 30px;
+  box-sizing: border-box;
   width: 100vw;
   text-align: center;
 }
@@ -146,4 +150,51 @@ p {
   position: absolute;
   top: 40px;
   right: -30px;
+}
+
+@media screen and (max-width: 600px) {
+  .menu a {
+    display: none;
+  }
+
+  .descricao::after {
+    top: 110px;
+    right: 30px;
+  }
+
+  .menu {
+    justify-self: end;
+    justify-content: end;
+    align-content: start;
+  }
+  #logo-bikcraft {
+    justify-self: start;
+  }
+  .cabecalho {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .menu button {
+    border: 0;
+    height: 4rem;
+    width: 4rem;
+    background-color: #f7f7f7;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .menu a {
+    display: inline;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+  .menu button {
+    display: none;
+  }
+
+  .cabecalho {
+    grid-template-columns: 1fr;
+  }
 }
