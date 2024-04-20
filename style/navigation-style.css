@@ -1,0 +1,86 @@
+.menu-desktop a {
+  text-decoration: none;
+  letter-spacing: 0.25rem;
+  color: black;
+  text-transform: uppercase;
+  size: 4rem;
+  font-size: 1.5rem;
+}
+.menu-mobile {
+  display: none;
+}
+.menu-desktop li {
+  list-style: none;
+}
+@media (max-width: 600px) {
+  .menu-mobile {
+    position: relative;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.25rem;
+    cursor: grab;
+    border-radius: 0.5rem;
+    border: 0;
+    height: 3rem;
+    width: 3rem;
+  }
+  .menu-link {
+    background-color: #f7f7f7;
+  }
+
+  .menu-desktop {
+    position: absolute;
+    top: 18vh;
+    right: 0vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+
+  .menu-desktop.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .menu-desktop ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 82vh;
+  }
+
+  .menu-mobile div {
+    width: 1.5rem;
+    border-bottom: 0.15rem solid black;
+  }
+
+  .menu-desktop a:hover {
+    color: #900;
+  }
+  .line-1,
+  .line-3 {
+    transition: transform 0.5s;
+  }
+  .line-2 {
+    transition: opacity 0.3s linear;
+  }
+
+  .menu-mobile.active .line-1 {
+    position: absolute;
+    top: 1.5rem;
+    transform: rotate(45deg);
+  }
+  .menu-mobile.active .line-3 {
+    position: absolute;
+    top: 1.5rem;
+    transform: rotate(-45deg);
+    transition: transform 1s;
+  }
+  .menu-mobile.active .line-2 {
+    opacity: 0;
+  }
+}
